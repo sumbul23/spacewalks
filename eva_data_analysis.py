@@ -1,9 +1,8 @@
-import json
-import csv
-import datetime as dt
 import matplotlib.pyplot as plt
 import pandas as pd
 import sys
+
+# https://data.nasa.gov/resource/eva.json (with modifications)
 
 def main(input_file, output_file, graph_file):
     print("--START--")
@@ -111,13 +110,13 @@ def plot_cumulative_time_in_space(df, graph_file):
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
+        input_file = './data/eva_data.json'
+        output_file = './results/eva_data.csv'
         print(f'Using default input and output filenames')
     else:
         input_file = sys.argv[1]
         output_file = sys.argv[2]
         print('Using custom input and output filenames')
 
-    graph_file = './cumulative_eva_graph.png'
+    graph_file = './results/cumulative_eva_graph.png'
     main(input_file, output_file, graph_file)
