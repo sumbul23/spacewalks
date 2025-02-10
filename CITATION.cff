@@ -23,3 +23,8 @@ keywords:
   - NASA
   - Extravehicular Activity
 license: CC-BY-1.0
+version: 1,0
+identifiers:
+  - type: doi
+    value: 10.5072/zenodo.164806
+date-released: 2025-02-10
